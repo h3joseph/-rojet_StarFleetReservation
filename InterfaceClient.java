@@ -8,7 +8,7 @@ public interface InterfaceClient {
     void reserverMission(String idReservation, Personne passager, Mission mission);
     void confirmerReservation(String idReservation);
     void annulerReservation(String idReservation);
-    void proposerReservations(Scanner scanner, Personne client); // Ajouté
-    void listerCapitaines(); // Ajouté
+    void proposerReservations(Scanner scanner, Personne client); 
+    void listerCapitaines(); 
     void sauvegarderDonnees(String fichier) throws IOException;
 }

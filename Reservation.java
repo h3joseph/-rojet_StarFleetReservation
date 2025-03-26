@@ -26,7 +26,7 @@ public class Reservation implements Serializable {
 
     public void annuler() {
         this.confirmee = false;
-        mission.getReservations().remove(this); // Fonctionne si getReservations() retourne List<Reservation>
+        mission.getReservations().remove(this); 
     }
 
     public String getIdReservation() { return idReservation; }

@@ -13,11 +13,12 @@ public class Vaisseau {
         this.capaciteMax = capaciteMax;
         this.missions = new ArrayList<>();
     }
+    public String getNomDuVaisseau() { return nomDuVaisseau; }
+    public int getCapaciteMax() { return capaciteMax; }
 
     public void ajouterUneMission(Mission mission) {
         missions.add(mission);
     }
 
-    public String getNomDuVaisseau() { return nomDuVaisseau; }
-    public int getCapaciteMax() { return capaciteMax; }
+    
 }

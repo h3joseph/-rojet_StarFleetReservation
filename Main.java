@@ -7,13 +7,13 @@ public class Main {
             Scanner scanner = new Scanner(System.in);
             InterfaceClient systeme = new SystemeReservation();
 
-            // Initialisation des vaisseaux
+           
             Vaisseau vogueMerry = new Vaisseau("001", "Vogue Merry", 3);
             Vaisseau oroJackson = new Vaisseau("002", "Oro Jackson", 20);
             ((SystemeReservation) systeme).ajouterVaisseau(vogueMerry);
             ((SystemeReservation) systeme).ajouterVaisseau(oroJackson);
 
-            // Initialisation des personnes
+            
             Officier luffy = new Officier("Monkey D.", "Luffy", "C001", "Capitaine", "Roi des Pirates");
             Officier goldRoger = new Officier("Gol D.", "Roger", "C002", "Capitaine", "Roi des Pirates Légendaire");
             Passager chopper = new Passager("Tony Tony", "Chopper", "P001", "Île de Drum", "Médecin de bord");
@@ -21,7 +21,7 @@ public class Main {
             systeme.ajouterPersonne(goldRoger);
             systeme.ajouterPersonne(chopper);
 
-            // Initialisation des missions
+           
             Mission missionVogueMerry = new Mission("M001", Date.valueOf("2025-04-01"), Date.valueOf("2025-04-10"),
                     "Recherche du One Piece", "Grand Line", vogueMerry);
             Mission missionOroJackson = new Mission("M002", Date.valueOf("1980-01-01"), Date.valueOf("1980-01-15"),
@@ -29,11 +29,10 @@ public class Main {
             ((SystemeReservation) systeme).creerMission(missionVogueMerry);
             ((SystemeReservation) systeme).creerMission(missionOroJackson);
 
-            // Réservations initiales pour les capitaines
             systeme.reserverMission("R001", luffy, missionVogueMerry);
             systeme.reserverMission("R003", goldRoger, missionOroJackson);
 
-            // Boucle du menu
+            
             while (true) {
                 System.out.println("\n1. Réserver une mission");
                 System.out.println("2. Voir les capitaines");
