@@ -32,4 +32,6 @@ public class Mission {
         }
         return false;
     }
+    public Date getDateDebut() { return dateDepart; }
+    public Date getDateFin() { return dateRetour; }
 }
